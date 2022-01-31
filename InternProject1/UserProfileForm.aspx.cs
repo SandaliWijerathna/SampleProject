@@ -18,7 +18,18 @@ namespace InternProject1
 
         protected void Save(object sender, EventArgs e)
         {
-
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-HDM827MJ;Initial Catalog=SampleProjectCompulin;Integrated Security=True");
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[profile]
+           ([FullName]
+           ,[Email]
+           ,[Address]
+           ,[ContactNo]) 
+     VALUES
+           ('" + txtFullName.Text + "', '" + txtEmail.Text + "' , '" + txtAddress.Text + "' , '" + txtContactNo.Text + "')", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("<script>alert('User Profile Update Successfully')</script>");
         }
     }
 }
