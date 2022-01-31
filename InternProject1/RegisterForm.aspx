@@ -7,9 +7,40 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+   <h2>Welcome !! </h2>
+        <form id="form1" runat="server">
         <div>
-            hi
+             <table>  
+
+                <tr>  
+                <td>Name :</td>  
+                <td> <asp:TextBox ID="name" runat="server"></asp:TextBox></td>  
+                </tr>  
+
+                <tr>  
+                <td>Email :</td>  
+                <td> <asp:TextBox ID="email" runat="server"></asp:TextBox></td>  
+                </tr> 
+                
+                <tr>  
+                <td>Password :</td>  
+                <td> <asp:TextBox ID="pw" runat="server"></asp:TextBox></td>  
+                </tr> 
+
+                <tr>  
+                <td>City :</td>  
+                <td> <asp:TextBox ID="city" runat="server"></asp:TextBox></td>  
+                </tr> 
+
+                <tr>  
+                <td> <asp:Button ID="Button1" runat="server" Text="Register" OnClick="Submit" /> </td>  
+                </tr>
+                 
+                <tr>  
+                <td> <asp:Button ID="Button2" runat="server" Text="Go to Profile"/> </td>  
+                </tr>
+                
+            </table> 
         </div>
     </form>
 </body>
